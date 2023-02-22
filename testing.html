@@ -1,29 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head>
 <meta charset=utf-8 />
-<title>Change the content of a cell</title>
-<style type="text/css">
-body {margin: 30px;}
-</style>  
-</head><body>
-<table id="myTable" border="1">
-</table><form>
-<input type="button" onclick="createTable()" value="Create the table">
+<title>Remove items from a dropdown list</title>
+</head><body><form>
+<select id="colorSelect">
+<option id="red">Red</option>
+<option id="green">Green</option>
+<option id="white">White</option>
+<option id="black">Black</option>
+</select>
+<input type="button" onclick="removecolor()" value="Select and Remove">
+</form>
 <script>
-
-function createTable(){
-var x = parseInt(prompt("Number of rows"),10)
-var y = parseInt(prompt("Number of col"),10)
-var table = document.getElementById("myTable")
-
-for (var i = 0; i<x; i++){
-    var row = table.insertRow(i)
-
-for (var j = 0; j<y; j++){
-    var col = row.insertCell(j)
-    col.innerHTML = "Row-"+(i+1)+"col-"+(j+1)
-}}}
-
+function removecolor(){
+var input1 = document.getElementById("colorSelect")
+input2 = input1.remove(input1.selectedIndex)}
 </script>
-</form></body></html>
+</body>
+</html>
